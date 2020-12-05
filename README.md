@@ -7,7 +7,7 @@ In order to work on multiple web projects local(host)ly it is beneficial to have
 ## so what?
 Noone really whants to get bothered with the antiquated and cumbersome syntax of Apache config files. You can browse the web to find how this works but that also is cumbersome and result is error prone. Also on Windows the hosts file is tucked away nicely where nobody can find it (thank you Microsoft!)
 
-## no what?
+## now what?
 This little program takes away the cumbersomeness of creating and activating VirtualHosts entries and at the sametime maintains the /etc/hosts file. It is as easy as dragging and dropping a folder to a desktop icon, typing a hostname, and paste the setup to a vhost.conf file of your liking.
 
 ## What it does not
