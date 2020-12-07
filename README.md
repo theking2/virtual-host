@@ -24,13 +24,13 @@ This little program takes away the cumbersomeness of creating and activating Vir
 For all usages it is important that vhosts is activated in Apache, wampp has this, mamp not. 
 
 ## Usage 1
-* Copy the exe file to a location you can easily, for instance the desktop.
+* Copy the exe file or a shortcut to it to a location you can access easily, for instance the desktop.
 * Richt click the exe and make sure that Run as Administrator is activated in Compatibility settings
 * Drag and drop a folder on the exe, accept UAC, type a name, open the vhosts.conf and paste the contents of the clipboard to the end of thee file
 * Restart Apache
 
 ## Usage 2
-* Copy the exe file to a location you can easily, for instance the desktop.
+* Copy the exe file to the C:\Program Files\ or a subfolder
 * Create a registry entry like:
 
 > Windows Registry Editor Version 5.00
