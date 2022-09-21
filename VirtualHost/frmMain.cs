@@ -35,7 +35,7 @@ namespace VirtualHost
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            this.Hostname = this.txtHostname.Text;
+            this.Hostname = this.txtHostname.Text.Trim();
 
             String result = String.Format( TEMPLATE, this.Path, this.Hostname );
             Clipboard.SetDataObject(result);
@@ -79,6 +79,25 @@ namespace VirtualHost
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnAddToXampp_Click(object sender, EventArgs e)
+        {
+            this.Hostname = this.txtHostname.Text.Trim();
+            String configFile = "C:\\xampp\\apache\\conf\\extra\\httpd-vhosts.conf";
+            MessageBox.Show(String.Format("Adding to {0}", configFile ) );
+            try
+            {
+                using (StreamWriter config = new StreamWriter(configFile, append: true))
+                {
+                    config.WriteLine(String.Format(TEMPLATE, this.Path, this.Hostname));
+                    config.Close();
+                }
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

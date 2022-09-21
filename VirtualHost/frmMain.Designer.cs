@@ -33,14 +33,17 @@
             this.btnOk = new System.Windows.Forms.Button();
             this.lblPath = new System.Windows.Forms.Label();
             this.txtPath = new System.Windows.Forms.TextBox();
+            this.btnAddToXampp = new System.Windows.Forms.Button();
+            this.btnAddToMamp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblHostname
             // 
             this.lblHostname.AutoSize = true;
-            this.lblHostname.Location = new System.Drawing.Point(30, 66);
+            this.lblHostname.Location = new System.Drawing.Point(40, 81);
+            this.lblHostname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHostname.Name = "lblHostname";
-            this.lblHostname.Size = new System.Drawing.Size(55, 13);
+            this.lblHostname.Size = new System.Drawing.Size(72, 17);
             this.lblHostname.TabIndex = 0;
             this.lblHostname.Text = "Hostname";
             // 
@@ -48,18 +51,20 @@
             // 
             this.txtHostname.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtHostname.Location = new System.Drawing.Point(33, 82);
+            this.txtHostname.Location = new System.Drawing.Point(44, 101);
+            this.txtHostname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtHostname.Name = "txtHostname";
-            this.txtHostname.Size = new System.Drawing.Size(351, 20);
+            this.txtHostname.Size = new System.Drawing.Size(467, 22);
             this.txtHostname.TabIndex = 1;
             this.txtHostname.Validating += new System.ComponentModel.CancelEventHandler(this.txtHostname_Validating);
             // 
             // btnOk
             // 
             this.btnOk.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOk.Location = new System.Drawing.Point(33, 120);
+            this.btnOk.Location = new System.Drawing.Point(44, 148);
+            this.btnOk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(75, 23);
+            this.btnOk.Size = new System.Drawing.Size(100, 28);
             this.btnOk.TabIndex = 2;
             this.btnOk.Text = "Copy";
             this.btnOk.UseVisualStyleBackColor = true;
@@ -69,9 +74,10 @@
             // lblPath
             // 
             this.lblPath.AutoSize = true;
-            this.lblPath.Location = new System.Drawing.Point(30, 13);
+            this.lblPath.Location = new System.Drawing.Point(40, 16);
+            this.lblPath.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPath.Name = "lblPath";
-            this.lblPath.Size = new System.Drawing.Size(29, 13);
+            this.lblPath.Size = new System.Drawing.Size(37, 17);
             this.lblPath.TabIndex = 3;
             this.lblPath.Text = "Path";
             // 
@@ -80,21 +86,45 @@
             this.txtPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPath.Enabled = false;
-            this.txtPath.Location = new System.Drawing.Point(33, 29);
+            this.txtPath.Location = new System.Drawing.Point(44, 36);
+            this.txtPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPath.Name = "txtPath";
-            this.txtPath.Size = new System.Drawing.Size(351, 20);
+            this.txtPath.Size = new System.Drawing.Size(467, 22);
             this.txtPath.TabIndex = 4;
+            // 
+            // btnAddToXampp
+            // 
+            this.btnAddToXampp.Location = new System.Drawing.Point(168, 148);
+            this.btnAddToXampp.Name = "btnAddToXampp";
+            this.btnAddToXampp.Size = new System.Drawing.Size(121, 28);
+            this.btnAddToXampp.TabIndex = 5;
+            this.btnAddToXampp.Text = "Add to XAMPP";
+            this.btnAddToXampp.UseVisualStyleBackColor = true;
+            this.btnAddToXampp.Click += new System.EventHandler(this.btnAddToXampp_Click);
+            // 
+            // btnAddToMamp
+            // 
+            this.btnAddToMamp.Location = new System.Drawing.Point(316, 148);
+            this.btnAddToMamp.Name = "btnAddToMamp";
+            this.btnAddToMamp.Size = new System.Drawing.Size(130, 28);
+            this.btnAddToMamp.TabIndex = 5;
+            this.btnAddToMamp.Text = "Add to MAMP";
+            this.btnAddToMamp.UseMnemonic = false;
+            this.btnAddToMamp.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 174);
+            this.ClientSize = new System.Drawing.Size(555, 214);
+            this.Controls.Add(this.btnAddToMamp);
+            this.Controls.Add(this.btnAddToXampp);
             this.Controls.Add(this.txtPath);
             this.Controls.Add(this.lblPath);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.txtHostname);
             this.Controls.Add(this.lblHostname);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMain";
             this.Text = "Add VirtualHost";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
@@ -110,6 +140,8 @@
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Label lblPath;
         private System.Windows.Forms.TextBox txtPath;
+        private System.Windows.Forms.Button btnAddToXampp;
+        private System.Windows.Forms.Button btnAddToMamp;
     }
 }
 
