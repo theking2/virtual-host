@@ -33,6 +33,8 @@
             this.btnOk = new System.Windows.Forms.Button();
             this.lblPath = new System.Windows.Forms.Label();
             this.txtPath = new System.Windows.Forms.TextBox();
+            this.btnXampp = new System.Windows.Forms.Button();
+            this.btnMAMP = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblHostname
@@ -85,11 +87,33 @@
             this.txtPath.Size = new System.Drawing.Size(351, 20);
             this.txtPath.TabIndex = 4;
             // 
+            // btnXampp
+            // 
+            this.btnXampp.Location = new System.Drawing.Point(128, 120);
+            this.btnXampp.Name = "btnXampp";
+            this.btnXampp.Size = new System.Drawing.Size(97, 23);
+            this.btnXampp.TabIndex = 5;
+            this.btnXampp.Text = "Add to XAMPP";
+            this.btnXampp.UseVisualStyleBackColor = true;
+            this.btnXampp.Click += new System.EventHandler(this.btnXAMPP_Click);
+            // 
+            // btnMAMP
+            // 
+            this.btnMAMP.Location = new System.Drawing.Point(240, 120);
+            this.btnMAMP.Name = "btnMAMP";
+            this.btnMAMP.Size = new System.Drawing.Size(101, 23);
+            this.btnMAMP.TabIndex = 6;
+            this.btnMAMP.Text = "Add to MAMP";
+            this.btnMAMP.UseVisualStyleBackColor = true;
+            this.btnMAMP.Click += new System.EventHandler(this.btnMAMP_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(416, 174);
+            this.Controls.Add(this.btnMAMP);
+            this.Controls.Add(this.btnXampp);
             this.Controls.Add(this.txtPath);
             this.Controls.Add(this.lblPath);
             this.Controls.Add(this.btnOk);
@@ -110,6 +134,8 @@
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Label lblPath;
         private System.Windows.Forms.TextBox txtPath;
+        private System.Windows.Forms.Button btnXampp;
+        private System.Windows.Forms.Button btnMAMP;
     }
 }
 
