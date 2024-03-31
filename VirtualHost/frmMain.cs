@@ -47,7 +47,7 @@ namespace VirtualHost
                 hosts.WriteLine("#Added by virtual-host\r\n" + this.Hostname);
                 hosts.WriteLine("127.0.0.1\t" + this.Hostname);
                 hosts.WriteLine("::1\t" + this.Hostname);
-                hosts.WriteLine("#End added by virtual-host");
+                hosts.WriteLine("#End added by VirtualHosts");
                 hosts.WriteLine();
 
                 hosts.Close();
@@ -79,51 +79,6 @@ namespace VirtualHost
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
-        }
-
-        private void btnXAMPP_Click(object sender, EventArgs e)
-        {
-            getHostName();
-
-            try
-            {
-                using (StreamWriter hosts = new StreamWriter("C:\\xampp\\apache\\conf\\extra\\httpd-vhosts.conf", append: true))
-                {
-                    hosts.WriteLine();
-                    hosts.WriteLine(String.Format(TEMPLATE, this.Path, this.Hostname));
-                    hosts.WriteLine();
-
-                    hosts.Close();
-                }
-            } catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void btnMAMP_Click(object sender, EventArgs e)
-        {
-            getHostName();
-
-            try
-            {
-                using (StreamWriter hosts = new StreamWriter("C:\\MAMP\\conf\\apache\\extra\\httpd-vhosts.conf", append: true))
-                {
-                    hosts.WriteLine();
-                    hosts.WriteLine( String.Format(TEMPLATE, this.Path, this.txtHostname.Text.Trim()) );
-                    hosts.WriteLine();
-
-                    hosts.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        private void getHostName()
-        {
-            this.Hostname = this.txtHostname.Text.Trim();
         }
     }
 }
